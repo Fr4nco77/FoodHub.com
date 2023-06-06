@@ -16,7 +16,7 @@ export const Nav = () => {
     const handleSearch = () => {
         dispatch(addRecipes(title));
         setTitle("");
-        navigate("/");
+        navigate("/home");
     }
 
     const handleBack = () => {

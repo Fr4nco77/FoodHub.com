@@ -16,7 +16,7 @@ module.exports = (sequelize) => {
       defaultValue: "https://definicion.de/wp-content/uploads/2022/08/figuras-geometricas.png"
     },
     summary: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     healthScore: {
@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
       }
     },
     steps: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false
     }
   }, { timestamps: false });
