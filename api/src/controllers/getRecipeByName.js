@@ -6,7 +6,7 @@ const { Recipe, Diet } = require("../db");
 module.exports = async(req, res) => {
     try {
         const { title } = req.query;
-        const endpoint = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&titleMatch=${title}&number=45`;
+        const endpoint = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&titleMatch=${title}&number=20`;
         const endpointAll = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`;
 
         if(title) {
