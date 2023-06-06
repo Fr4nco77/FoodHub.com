@@ -1,0 +1,120 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+#detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    background-color: rgb(195, 25, 82);
+    box-shadow:  0.5vw 1vh #111;
+    color: rgb(245, 235, 199);
+    padding: 1vw;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    width: 100%;
+    height: 60%;
+}
+
+#top img {
+    border-radius: 10px;
+    box-shadow:  0.5vw 1vh #111;
+    width: 30vw;
+    height: 37vh;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.1vw;
+    max-width:60%;
+    height:85%;
+}
+
+#info p {
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+#info span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#infoHealth {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+
+#summary {
+    width:100%;
+    height: 100%;
+    margin-top: 1vh;
+    overflow: auto;
+    /* border-top: solid 1px; */
+}
+
+#summary::-webkit-scrollbar {
+    width: 0.5vw; 
+}
+  
+#summary::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+  
+#summary::-webkit-scrollbar-track {
+    background-color: #111;
+    border-radius: 5px;
+}
+#bottom {
+    display:flex;
+    flex-direction: column;
+    width:95%;
+    height: auto;
+    overflow:auto;
+    border-top: solid 1px;
+}
+
+#bottom p {
+   font-size: 1.1vw;
+   margin-bottom: 0;
+}
+
+#bottom span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#bottom::-webkit-scrollbar {
+    width: 0.7vw; 
+}
+  
+#bottom::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+  
+#bottom::-webkit-scrollbar-track {
+    background-color: #111;
+    border-radius: 5px;
+}

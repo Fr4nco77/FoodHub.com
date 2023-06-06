@@ -1,0 +1,236 @@
+#container {
+    max-width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* border: solid 1px; */
+    padding: 0 5vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 0 1vh;
+    /* border: solid 1px; */
+}
+
+.logo span {
+    display: flex;
+    background-color: rgb(245, 235, 199);
+    border-radius: 5px;
+    color: rgb(195, 25, 82);
+    height: 6vh;
+    align-items: center;
+}
+
+.logo button {
+    align-items: center;
+    background-color: rgb(195, 25, 82);
+    /* border: 2px solid #111; */
+    border:none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: rgb(245, 235, 199);
+    cursor: pointer;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 1.9vw;
+    font-weight: bold;
+    height: 8vh;
+    justify-content: center;
+    line-height: 24px;
+    width: 9vw;
+    padding: 0 1vh;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.logo button:after {
+    background-color: #111;
+    border-radius: 10px;
+    content: "";
+    display: block;
+    height: 8vh;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.logo button:hover:after {
+    transform: translate(0, 0);
+}
+
+.logo button:active {
+    background-color: #fee6e3;
+    outline: 0;
+}
+
+.logo button:hover {
+    outline: 0;
+}
+
+.control {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    /* border:solid 1px; */
+    gap: 3vw;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: solid 1px; */
+    width: 45%;
+    height: 100%;
+    gap: 1vw;
+}
+
+
+.buttons button {
+    align-items: center;
+    background-color: rgb(195, 25, 82);
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: rgb(245, 235, 199);
+    cursor: pointer;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 1vw;
+    font-weight: bold;
+    height: 6vh;
+    justify-content: center;
+    line-height: 24px;
+    width: 7vw;
+    padding: 0 1vh;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.buttons button:after {
+    background-color: #111;
+    border-radius: 10px;
+    content: "";
+    display: block;
+    height:6vh;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.buttons button:hover:after {
+    transform: translate(0, 0);
+}
+
+.buttons button:active {
+    background-color: #fee6e3;
+    outline: 0;
+}
+
+.buttons button:hover {
+    outline: 0;
+}
+
+
+.searchBar {
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 1.5vh;
+    padding-right: 1.5vw;
+}
+
+.searchBar input {
+    height: 50%;
+    width: 65%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    /* border: solid 2px; */
+    text-indent: 10px;
+    box-shadow:  0.5vw 1vh #111;
+    font-size: 1vw;
+}
+
+.searchBar button {
+    align-items: center;
+    background-color: rgb(195, 25, 82);
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: rgb(245, 235, 199);
+    cursor: pointer;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 2vh;
+    font-weight: bold;
+    height: 5vh;
+    justify-content: center;
+    line-height: 24px;
+    width: 10%;
+    padding: 0.5vh;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.searchBar button:after {
+    background-color: #111;
+    border-radius: 10px;
+    content: "";
+    display: block;
+    height: 5vh;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+.searchBar button:hover:after {
+    transform: translate(0, 0);
+}
+
+.searchBar button:active {
+    background-color: #fee6e3;
+    outline: 0;
+}
+
+.searchBar button:hover {
+    outline: 0;
+}
+
