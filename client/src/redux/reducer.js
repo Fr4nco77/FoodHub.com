@@ -49,13 +49,13 @@ export default function reducer(state = initialState, { type, payload }) {
             data.sort((a,b) => {
                 if(payload === "+") {
                     if(a.healthScore > b.healthScore) return 1;
-                    if(a.healthScore < b.healthScore) return -1
+                    if(a.healthScore < b.healthScore) return -1;
                 }
                 else if(payload === "-"){
                     if(a.healthScore < b.healthScore) return 1;
                     if(a.healthScore > b.healthScore) return -1;
                 }
-                return 0
+                return 0;
             })
         
             return {
@@ -86,7 +86,7 @@ export default function reducer(state = initialState, { type, payload }) {
                 if(isNaN(element.id)) {
                     return element.Diets.some(e => e.name === payload);
                 }else {
-                    return element.diets.includes(payload)
+                    return element.diets.includes(payload);
                 }
             });
             return {

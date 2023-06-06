@@ -11,7 +11,7 @@ export const addAllRecipes = () => {
         payload: data
       })
     } catch (error) {
-      console.error("Error en addAllRecipes:", error.message)
+      console.error("Error en addAllRecipes:", error.message);
     }
   }
 }
@@ -32,7 +32,7 @@ export const addRecipes = (title) => {
 }
 
 export const addDiets = () => {
-  const endpoint = "http://localhost:3001/diets"
+  const endpoint = "http://localhost:3001/diets";
   return async(dispatch) => {
     try {
       const { data } = await axios(endpoint);
@@ -41,7 +41,7 @@ export const addDiets = () => {
         payload: data
       })
     } catch (error) {
-      console.error("Error en addDiets:", error.message)
+      console.error("Error en addDiets:", error.message);
     }
   }
 }
@@ -85,7 +85,7 @@ export const createRecipe = (recipe) => {
   const endpoint = "http://localhost:3001/recipe";
   return async(dispatch) => {
     try {
-      const { data } = await axios.post(endpoint, recipe)
+      const { data } = await axios.post(endpoint, recipe);
       return dispatch({
         type: CREATE_RECIPE,
         payload: data,

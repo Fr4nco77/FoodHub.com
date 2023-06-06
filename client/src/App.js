@@ -6,7 +6,7 @@ import { Detail } from "./components/Detail/Detail";
 import { Form } from "./components/Form/Form";
 function App() {
 
-  const {pathname} = useLocation()
+  const {pathname} = useLocation();
 
   return (
     <div>

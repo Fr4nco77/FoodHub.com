@@ -8,8 +8,8 @@ module.exports = async(req, res) => {
         const diets = await Diet.findAll()
 
         if(diets.length === 0) {
-            const endpoint = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=50`
-            const allRecipes = (await axios(endpoint)).data.results
+            const endpoint = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=50`;
+            const allRecipes = (await axios(endpoint)).data.results;
             const dietsArray = [];
 
             allRecipes.forEach((recipe) => {
@@ -20,14 +20,14 @@ module.exports = async(req, res) => {
                 });
             }); 
             await Diet.bulkCreate(dietsArray.map((name) => ({ name })));
-            const diets = await Diet.findAll()
+            const diets = await Diet.findAll();
             res.status(200).json(diets); 
         }
         else {
-            res.status(200).json(diets)
+            res.status(200).json(diets);
         }
         
     } catch (error) {
-        res.status(500).json({error: error.message})
+        res.status(500).json({error: error.message});
     }
 }

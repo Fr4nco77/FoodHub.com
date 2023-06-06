@@ -18,10 +18,6 @@ export const Home = () => {
     const [origin, setOrigin] = useState("");
     const [selectedDiet, setSelectedDiet] = useState("");
 
-
-
-
-
     const [currentPage, setCurrentPage] = useState(1);
     const [inputPage, setInputPage] = useState(1);
     const cardsPerPage = 9;
@@ -71,28 +67,28 @@ export const Home = () => {
     };
 
     const handleOrderRecipes = (e) => {
-        const {value} = e.target
+        const {value} = e.target;
         dispatch(orderRecipes(value));
         setOrderBy(value);
     };
 
 
     const handleOrderHS = (e) => {
-        const { value } = e.target
+        const { value } = e.target;
         dispatch(orderHS(value));
-        setHealthScore(value)
+        setHealthScore(value);
     };
 
     const handleOrigin = (e) => {
-        const { value } = e.target
+        const { value } = e.target;
         dispatch(orderOrigin(value));
-        setOrigin(value)
+        setOrigin(value);
     };
 
     const handleDiets = (e) => {
         const { value } = e.target;
         dispatch(dietsFilter(value));
-        setSelectedDiet(value)
+        setSelectedDiet(value);
     };
 
 

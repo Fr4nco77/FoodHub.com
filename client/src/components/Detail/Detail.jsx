@@ -5,39 +5,39 @@ import styles from "./Detail.module.css";
 
 export const Detail = () => {
 
-    const { id } = useParams()
+    const { id } = useParams();
     const [ recipe, setRecipe ] = useState([]);
 
     useEffect(() => {
         const axiosRecipe = async() => {
-            const response = await axios(`http://localhost:3001/recipe/${id}`)
-            setRecipe(response.data)
+            try {
+                const response = await axios.get(`http://localhost:3001/recipe/${id}`);
+                setRecipe(response.data);
+              } catch (error) {
+                console.error("Error axiosRecipe:", error);
+              }
         }
         axiosRecipe();
 
-        return setRecipe("");
+        return setRecipe([]);
     }, [id])
 
     let steps = [];
     let diets = [];
-    if(recipe.analyzedInstructions){
+    if(recipe.analyzedInstructions && recipe.diets){
         if (recipe.analyzedInstructions?.length === 0) {
-            steps.push("Aún siguen en proceso, pero no te preocupes pronto estarán");
-        } else if (recipe.analyzedInstructions) {
+            steps.push("They are still in process, but don't worry soon they will be");
+        } else {
             steps = recipe.analyzedInstructions[0].steps.map((element) => element.step);
         }
-    } 
-    if(recipe.steps){
-        steps.push(recipe.steps)
-    }
-    if(recipe.diets) {
         recipe.diets.forEach(diet => {
-            diets.push(diet + "/ ")
+            diets.push(diet + "/ ");
         })
-    }
-    if(recipe.Diets) {
+    } 
+    if(recipe.steps && recipe.Diets){
+        steps.push(recipe.steps);
         recipe.Diets.forEach(element => {
-            diets.push(element.name + "/ ")
+            diets.push(element.name + "/ ");
         });
     }
 

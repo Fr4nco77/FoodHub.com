@@ -3,12 +3,13 @@ import styles from "./Card.module.css";
 
 export const Card = (props) => {
     const { id, title, image, diets, Diets } = props.recipe;
-    let list = []
+    let list = [];
+
     if (diets) {
         list = diets.map((diet) => {
           return diet + "/ ";
         });
-      } else if (Diets) {
+      } else {
         list = Diets.map((diet) => {
           return (diet.name + "/ ");
         });

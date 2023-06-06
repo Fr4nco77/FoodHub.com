@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Nav.module.css";
 import { useDispatch } from "react-redux";
@@ -6,8 +6,8 @@ import { addAllRecipes, addRecipes, removeFilters } from "../../redux/actions";
 
 export const Nav = () => {
     let [ title, setTitle ] = useState("");
-
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setTitle(e.target.value);
@@ -16,11 +16,13 @@ export const Nav = () => {
     const handleSearch = () => {
         dispatch(addRecipes(title));
         setTitle("");
+        navigate("/");
     }
 
     const handleBack = () => {
-        dispatch(addAllRecipes())
-        dispatch(removeFilters())
+        dispatch(addAllRecipes());
+        dispatch(removeFilters());
+        navigate("/home");
     }
     return (
         <div id={styles.container}>
